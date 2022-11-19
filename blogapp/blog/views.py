@@ -26,7 +26,7 @@ data = {
             'title': 'Komple Uygulama Geliştirme',
             'image': 'foto1.jpg',
             'isActive': True,
-            'isHome': True,
+            'isHome': False,
             'Description': 'Güzel Kurs'
         },
         {
@@ -54,6 +54,14 @@ def blogs(request):
 
 
 def blog_details(request, id):
+    
+    blogs=data['blogs']
+    selectedBlog=None
+    
+    for blog in blogs:
+        if blog['id']==id:
+            selectedBlog=blog
+    
     return render(request, "blog/blogs-details.html", {
-        'id': id,
+        'blog': selectedBlog,
     })

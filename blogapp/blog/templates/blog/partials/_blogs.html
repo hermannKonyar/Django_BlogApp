@@ -7,12 +7,12 @@
         </div>
         <div class="col-md-9">
             <div class="card-body">
-                <a href="{% url 'blog_details' 1 %}">
-                    <h5 class="card-title">Komple Web Geliştirme</h5>
+                <a href="{% url 'blog_details' blog.id %}">
+                    <h5 class="card-title">{{blog.title}}</h5>
                 </a>
                 
                 <p class="card-text">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed odit omnis suscipit iusto voluptatum ullam id, consequuntur temporibus ducimus. Excepturi odit officiis magni debitis necessitatibus molestias architecto quod, sint dolorum.
+                    {{blog.Description}}
                 </p>
             </div>
         </div>

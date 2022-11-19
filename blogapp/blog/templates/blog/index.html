@@ -9,6 +9,7 @@ Index
 
 {% block Content %}
 
+<br>
 
 
 <div class="container mt-3">
@@ -18,11 +19,16 @@ Index
             {% include 'partials/_categories.html' %}
         </div>
         <div class="col-9">
-            <h1>Home Page</h1>
-            <hr>
+            
             
             {% for blog in blogs %}
+
+            {% if blog.isHome and blog.isActive %}
+
             {% include 'blog/partials/_blogs.html' %}
+            
+            {% endif %}
+            
             {% endfor %}
             
             
