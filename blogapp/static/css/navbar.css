@@ -79,7 +79,7 @@ p {
 
 .header-area {
     position: relative;
-    height: 50vh;
+    height: 20vh;
     background: #5bc0de;
     background-attachment: fixed;
     background-position: center center;
@@ -113,9 +113,11 @@ p {
     width: 100%;
     transition: background 0.6s ease-in;
     z-index: 99999;
+    font-family: 'Lobster', cursive;
+    font-size: 2.5rem;
 }
 
-.navbar .navbar-brand {
+.navbar.navbar .navbar-brand {
     font-family: 'Lobster', cursive;
     font-size: 2.5rem;
 }
@@ -264,9 +266,7 @@ p {
     .banner p {
         font-size: 2rem;
     }
-    .navbar-dark .navbar-nav .nav-link {
-        padding: 23px 15px;
-    }
+    .navbar-dark .navbar-nav .nav-link {}
     .navbar-dark .navbar-nav .nav-link::after {
         content: '';
         position: absolute;

@@ -7,27 +7,27 @@ data = {
     "blogs": [
         {
             'id': 1,
-            'title': 'Komple Web Geliştirme',
-            'image': 'foto1.jpg',
+            'title': 'Ege Yöresi Yemekleri',
+            'image': '5.jpg',
             'isActive': True,
             'isHome': True,
-            'Description': 'Güzel Kurs'
+            'Description': 'İzmir Köfte'
         },
         {
             'id': 2,
-            'title': 'Komple Mobil Geliştirme',
-            'image': 'foto1.jpg',
+            'title': 'Karadeniz Yöresi Yemekleri',
+            'image': '6.jpg',
             'isActive': True,
             'isHome': True,
-            'Description': 'Güzel Kurs'
+            'Description': 'Hamzi Pilavı'
         },
         {
             'id': 3,
-            'title': 'Komple Uygulama Geliştirme',
-            'image': 'foto1.jpg',
+            'title': 'Balkan Yemekleri',
+            'image': '7.jpg',
             'isActive': True,
-            'isHome': False,
-            'Description': 'Güzel Kurs'
+            'isHome': True,
+            'Description': 'Trileçe'
         },
         {
             'id': 4,
