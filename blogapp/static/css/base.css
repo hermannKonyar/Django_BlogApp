@@ -15,20 +15,7 @@
                 font-family: 'Lobster Two', cursive !important;
             }
             
-            #carouselExampleControls .carousel-item img {
-                object-fit: cover;
-                object-position: center;
-                height: 50vh;
-                overflow: hidden;
-            }
-            
-            .carousel,
-            .item,
-            .active {
-                height: 100%;
-                margin-bottom: 60px;
-            }
-            
-            .carousel-inner {
-                height: 100%;
+            .carousel-inner>.item>img,
+            .carousel-inner>.item>a>img {
+                width: 100%;
             }
