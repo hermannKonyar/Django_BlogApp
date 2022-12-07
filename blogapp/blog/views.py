@@ -65,3 +65,8 @@ def blog_details(request, id):
     return render(request, "blog/blogs-details.html", {
         'blog': selectedBlog,
     })
+
+def tarifler(request):
+    
+    
+    return render(request,"blog/tarifler.html")
