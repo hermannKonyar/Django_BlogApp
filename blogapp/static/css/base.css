@@ -19,3 +19,18 @@
             .carousel-inner>.item>a>img {
                 width: 100%;
             }
+            
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            
+            h2 {
+                font-family: 'Oswald', sans-serif;
+                color: #212121;
+                font-size: 30px;
+                font-weight: bold;
+                padding-left: 150px;
+                margin-top: 50px;
+            }

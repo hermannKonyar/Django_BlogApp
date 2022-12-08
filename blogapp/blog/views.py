@@ -68,5 +68,20 @@ def blog_details(request, id):
 
 def tarifler(request):
     
+    context = {
+        "blogs": data['blogs']
+    }
+    return render(request, "blog/tarifler.html", context)
     
-    return render(request,"blog/tarifler.html")
+
+def tarifler_details(request,id):
+    blogs=data['blogs']
+    selectedBlog=None
+    
+    for blog in blogs:
+        if blog['id']==id:
+            selectedBlog=blog
+    
+    return render(request, "blog/blogs-details.html", {
+        'blog': selectedBlog,
+    })
