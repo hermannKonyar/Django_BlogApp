@@ -13,6 +13,7 @@ class BlogEntry(models.Model):
 class FoodBlog(models.Model):
     title=models.CharField(max_length=200)
     image=models.CharField(max_length=200)
+    video=models.CharField(max_length=200)
     description=models.TextField()
     entry=models.TextField()
     isActive=models.BooleanField()

@@ -22,14 +22,14 @@ Blogs
 <div class="container mt-3">
 
     <div class="row">
-        <div class="col-3">
+        <div class="col-2">
             {% include 'partials/_categories.html' %}
         </div>
-        <div class="col-9">
+        <div class="col-10">
             
             {% for blog in blogs %}
             {% if blog.isActive %}
-            {% include 'blog/partials/_blogs.html' %}
+            {% include 'blog/partials/_tarifler.html' %}
             {% endif %}
             
             {% endfor %}
@@ -37,6 +37,11 @@ Blogs
         </div>
     </div>
 </div>
+
+<br>
+<br>
+<br>
+<br>
 
 {% endblock Content %}
     
