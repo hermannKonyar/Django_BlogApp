@@ -1,0 +1,49 @@
+
+
+
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block css_files %}
+
+<link rel="stylesheet" href="{% static 'blog/css/style.css'%}">
+{% endblock css_files %}
+
+
+{% block Title %}
+
+Blogs
+{% endblock Title %}
+
+{% block Content %}
+
+<br>
+
+
+<div class="container mt-3">
+
+    <div class="row">
+        <div class="col-2">
+            {% include 'partials/_categories.html' %}
+        </div>
+        <div class="col-10">
+            <div class="card-body">
+                <center><img src="{% static 'img/merve.png'%}" alt="" align="center" height="120" width ="120"></center>
+                <br>
+                <p align ="center">         Merhaba ben Merve  <br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid accusantium nulla voluptatem, quis placeat et quidem dignissimos modi perspiciatis impedit? Earum possimus rem libero nobis vel similique fugit modi doloribus?    </p>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+{% endblock Content %}

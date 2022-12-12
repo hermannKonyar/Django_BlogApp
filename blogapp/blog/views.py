@@ -1,5 +1,7 @@
 from django.http.response import HttpResponse
 from django.shortcuts import render
+from django.core.paginator import Paginator
+import requests
 
 # Create your views here.
 
@@ -11,7 +13,7 @@ data = {
             'image': '5.jpg',
             'isActive': True,
             'isHome': True,
-            'Description': 'İzmir Köfte'
+            'Description': 'İzmir Köfteasdasdasdasdasdsaasdasdasdasdasdasdasdasdasdasdasdasdasddsadasdasdasdasd'
         },
         {
             'id': 2,
@@ -50,7 +52,13 @@ def blogs(request):
     context = {
         "blogs": data['blogs']
     }
-    return render(request, "blog/blogs.html", context)
+    p=Paginator(data['blogs'],2)
+    page=request.GET.get('page')
+    contexts=p.get_page(page)
+    return render(request, "blog/blogs.html", {
+        "blogs":data['blogs'],
+        "contexts":contexts
+    })
 
 
 def blog_details(request, id):
@@ -78,6 +86,9 @@ def tarifler_details(request,id):
     blogs=data['blogs']
     selectedBlog=None
     
+    
+    
+    
     for blog in blogs:
         if blog['id']==id:
             selectedBlog=blog
@@ -85,3 +96,6 @@ def tarifler_details(request,id):
     return render(request, "blog/blogs-details.html", {
         'blog': selectedBlog,
     })
+
+def hakkimda(request):
+    return render(request,"blog/about.html")

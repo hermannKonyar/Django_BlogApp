@@ -17,6 +17,8 @@ Index
 
     <div class="row">
         <div class="col-2">
+            {% include 'partials/_profilecard.html' %}
+            <br>
             {% include 'partials/_categories.html' %}
         </div>
         <div class="col-10">
@@ -24,6 +26,8 @@ Index
              {% include 'partials/_slide.html' %}
 
              <br>
+
+             <h1 align="center">Tarifler</h1>
             
             {% for blog in blogs %}
 
@@ -34,6 +38,20 @@ Index
             {% endif %}
             
             {% endfor %}
+
+            <h1 align="center">Blog</h1>
+
+            {% for blog in blogs %}
+
+            {% if blog.isHome and blog.isActive %}
+
+            {% include 'blog/partials/_blogs.html' %}
+            
+            {% endif %}
+            
+            {% endfor %}
+
+
             
             
         </div>
