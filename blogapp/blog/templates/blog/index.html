@@ -16,43 +16,65 @@ Index
 <div class="container mt-3">
 
     <div class="row">
-        <div class="col-2">
+        <div class="col-2" id="hello">
             {% include 'partials/_profilecard.html' %}
             <br>
-            {% include 'partials/_categories.html' %}
+            
         </div>
         <div class="col-10">
              
              {% include 'partials/_slide.html' %}
 
              <br>
-
-             <h1 align="center">Tarifler</h1>
             
-            {% for blog in blogs %}
+                <div class="meraba">
 
-            {% if blog.isHome and blog.isActive %}
-
-            {% include 'blog/partials/_blogs.html' %}
+                    <div class = "meraba2">
+                        <hr>
+                        <h1 align="center">Tarifler</h1>
+                        <hr>
             
-            {% endif %}
+                        {% for blog in blogs %}
+    
+                        {% if blog.isHome and blog.isActive %}
+    
+                        {% include 'blog/partials/_blogs.html' %}
+                
+                        {% endif %}
+                
+                        {% endfor %} 
+
+                         
+
+                        <a href="blogs" id="devam" class="btn btn-primary btn-sm active" role="button" aria-pressed="true">Devamı için tıklayın.</a>
+                    </div>
+                    
+                    <div class = "meraba2">
+                        <hr>
+                        <h1 align="center">Blog</h1>
+                        <hr>
             
-            {% endfor %}
+                    {% for blog in blogs %}
 
-            <h1 align="center">Blog</h1>
+                    {% if blog.isHome and blog.isActive %}
 
-            {% for blog in blogs %}
-
-            {% if blog.isHome and blog.isActive %}
-
-            {% include 'blog/partials/_blogs.html' %}
+                    {% include 'blog/partials/_blogs.html' %}
             
-            {% endif %}
+                    {% endif %}
             
-            {% endfor %}
+                    {% endfor %}
 
+                    
 
-            
+                    <a href="tarifler" id="devam" class="btn btn-primary btn-sm active" role="button" aria-pressed="true">Devamı için tıklayın.</a>
+                    </div>
+
+                    
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </div>   
             
         </div>
     </div>
