@@ -128,6 +128,9 @@ STATICFILES_DIRS=[
     
 ]
 
+MEDIA_ROOT=BASE_DIR/'uploads'
+MEDIA_URL='/images/'
+
 
 
 # Default primary key field type

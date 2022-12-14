@@ -22,14 +22,26 @@ Blog Details
         <div class="col-10">
             <div class="card mb-3">
                 <div class="row">
-                    <div class="col-md-3">
-                        <img class ="img-fluid mt-4" src="{% static 'img/'|add:blog.image %}" alt="">
+                    <div class="col-md-5">
+                        <img class ="img-fluid mt-4" src="{{blogs.image.url}}" alt="">
+
+                        <br>
+                        <br>
+                        <iframe width="430" height="249" src="https://www.youtube.com/embed/Y2sgaLKpIrc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
-                    <div class="col-md-9">
+                    <div class="col-md-7">
                         <div class="card-body">
-                            <a href="{% url 'blog_details' blog.id %}">
-                                <h5 class="card-title">{{blog.title}}</h5>
+                            <a href="{% url 'blog_details' blogs.id %}">
+                                <h5 class="card-title">{{blogs.title}}</h5>
                             </a>
+                            <p>{{blogs.description}}</p>
+                           
+                            
+                           <pre>{{blogs.entry}}</pre>
+                            
+                           
+                                
+                            
                         </div>
                     </div>
                 </div>

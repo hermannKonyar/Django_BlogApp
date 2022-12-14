@@ -4,7 +4,7 @@ from django.utils.text import slugify
 
 class BlogEntry(models.Model):
     title = models.CharField(max_length=200)
-    image = models.CharField(max_length=200)
+    image = models.ImageField(upload_to='blogs')
     description = models.TextField()
     entry = models.TextField()
     video=models.URLField(null=True)
@@ -22,7 +22,7 @@ class BlogEntry(models.Model):
 
 class FoodBlog(models.Model):
     title = models.CharField(max_length=200)
-    image = models.CharField(max_length=200)
+    image = models.ImageField(upload_to='blogs')
     description = models.TextField()
     entry = models.TextField()
     video=models.URLField(null=True)

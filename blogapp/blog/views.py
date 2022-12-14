@@ -1,6 +1,7 @@
 from django.http.response import HttpResponse
 from django.shortcuts import render
 from django.core.paginator import Paginator
+from . models import BlogEntry,FoodBlog,UserInfo,Videos
 import requests
 
 # Create your views here.
@@ -42,36 +43,29 @@ data = {
     ]
 }
 def index(request):
-    context = {
-        "blogs": data['blogs']
-    }
-    return render(request, "blog/index.html", context)
+    blogs=BlogEntry.objects.all()
+    return render(request, "blog/index.html",{
+        'blogs':blogs
+    })
 
 
 def blogs(request):
-    context = {
-        "blogs": data['blogs']
-    }
-    p=Paginator(data['blogs'],2)
+    blog=BlogEntry.objects.all()
+    p=Paginator(blog,2)
     page=request.GET.get('page')
     contexts=p.get_page(page)
     return render(request, "blog/blogs.html", {
-        "blogs":data['blogs'],
-        "contexts":contexts
+        "blogs":blog,
+        "contexts":contexts,
     })
 
 
 def blog_details(request, id):
+    blog=BlogEntry.objects.get(id=id)
     
-    blogs=data['blogs']
-    selectedBlog=None
-    
-    for blog in blogs:
-        if blog['id']==id:
-            selectedBlog=blog
     
     return render(request, "blog/blogs-details.html", {
-        'blog': selectedBlog,
+        'blogs': blog,
     })
 
 def tarifler(request):
@@ -79,7 +73,7 @@ def tarifler(request):
     context = {
         "blogs": data['blogs']
     }
-    return render(request, "blog/tarifler.html", context)
+    return render(request, "blog/tarifler.html")
     
 
 def tarifler_details(request,id):
@@ -94,7 +88,7 @@ def tarifler_details(request,id):
             selectedBlog=blog
     
     return render(request, "blog/blogs-details.html", {
-        'blog': selectedBlog,
+        'blogs': blogs,
     })
 
 def hakkimda(request):
